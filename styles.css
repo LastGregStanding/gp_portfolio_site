@@ -1,0 +1,63 @@
+/******* Browser Reset ******/
+/***************************/
+
+* {
+  padding: 0px;
+  margin: 0px;
+  text-decoration: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+img,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:visited {
+  color: inherit;
+}
+
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+/******* End of Reset ******/
+/***************************/
