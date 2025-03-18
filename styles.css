@@ -61,3 +61,174 @@ a:active {
 
 /******* End of Reset ******/
 /***************************/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins%3Awght%40100%3B200%3B300%3B400%3B500%3B600&display=swap%27%29%3B");
+
+* {
+  font-family: "Poppins", sans-serif;
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: black;
+  color: white;
+  overflow-x: hidden;
+}
+
+/********* Header/Navigation *******/
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 9%;
+  background-color: black;
+  opacity: 85%;
+  filter: drop-shadow(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 3rem;
+  color: rgb(0, 171, 0);
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.logo:hover,
+.hamburger-btn i:hover {
+  transform: scale(1.1);
+}
+
+nav a,
+.menu-btn {
+  font-size: 1.3rem;
+  color: white;
+  margin-left: 2rem;
+  font-weight: 500;
+  transition: 0.3s ease;
+  border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active,
+.menu-btn:hover {
+  color: rgb(0, 171, 0);
+  border-bottom: 3px solid rgb(0, 171, 0);
+}
+
+@media (width <= 700px) {
+  nav {
+    position: absolute;
+    display: none;
+    top: 0;
+    right: 0;
+    width: 40%;
+    border-left: 3px solid rgb(0, 171, 0);
+    border-bottom: 3px solid rgb(0, 171, 0);
+    border-bottom-left-radius: 2rem;
+    padding: 1rem solid;
+    background-color: black;
+    border-top: 0.1rem solid black;
+  }
+
+  nav.active {
+    display: block;
+  }
+
+  nav a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+  }
+
+  nav a:hover,
+  nav a.active {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border-bottom: 0.5rem solid rgb(0, 171, 0);
+  }
+}
+
+@media (width > 700px) {
+  .hamburger-btn {
+    display: none;
+  }
+}
+
+.hamburger-btn i {
+  display: inline-flex;
+  justify-content: center;
+  font-size: 2rem;
+  transition: 0.3s ease;
+  color: rgb(0, 171, 0);
+}
+
+.hamburger-btn i:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+/******* Hamburger menu *******/
+
+/* prevent scrolling when hamburger menu is open */
+body.no-scroll {
+  overflow: hidden;
+}
+
+.hamburger-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 100;
+}
+
+.hamburger-menu.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.hamburger-menu ul {
+  width: 50vw;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-hamburger-btn {
+  position: absolute;
+  top: 4%;
+  right: 9%;
+  font-size: 2.5rem;
+  background: none;
+  border: none;
+  color: white;
+}
+
+.close-hamburger-btn:hover {
+  color: rgb(0, 171, 0);
+  cursor: pointer;
+  transition: 0.3s ease;
+  border-bottom: 0px;
+  font-size: 2.7rem;
+}
