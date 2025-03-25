@@ -232,3 +232,118 @@ body.no-scroll {
   border-bottom: 0px;
   font-size: 2.7rem;
 }
+
+/************** Section containers ***********/
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0px auto;
+}
+
+.section-heading {
+  font-size: 2rem;
+  width: 100%;
+  width: clamp(50px, 100%, 880px);
+  display: flex;
+  align-items: center;
+  margin: 10px 0px 40px;
+  white-space: nowrap;
+}
+
+.section-heading::after {
+  content: "";
+  display: block;
+  width: 300px;
+  height: 1px;
+  margin-left: 20px;
+  background-color: white;
+}
+
+.section p {
+  font-size: 1rem;
+}
+
+@media (width <= 700px) {
+  .section-heading {
+    width: 400px;
+  }
+}
+
+@media (width < 500px) {
+  .section-heading {
+    width: 100%;
+  }
+}
+
+/*********** Home ***************/
+
+.home-section {
+  height: 100vh;
+  justify-content: center;
+  width: 80vw;
+}
+
+.home-section h1 {
+  font-size: 8.5vw;
+  font-size: clamp(30px, 7.5vw, 70px);
+  white-space: nowrap;
+}
+
+.home-section-h1-first {
+  opacity: 0;
+  animation: slideInFromBottom 1s ease-in-out 0.5s forwards;
+}
+
+.home-section-h1-second {
+  opacity: 0;
+  animation: slideInFromBottom 1s ease-in-out 1s forwards;
+}
+
+.home-section h1 span {
+  color: rgb(0, 171, 0);
+}
+
+.home-bio {
+  margin-top: 10px;
+  width: clamp(250px, 100%, 700px);
+}
+
+.home-section p {
+  opacity: 0;
+  text-align: center;
+  font-size: 1rem;
+  margin: 0 auto;
+  animation: slideInFromBottom 1s ease-in-out 1.5s forwards;
+}
+
+.home-btn {
+  opacity: 0;
+  animation: slideInFromBottom 1s ease-in-out 2s forwards;
+}
+
+/********* Animations ********/
+
+@keyframes fade-in {
+  from {
+    scale: 0.5;
+    opacity: 0;
+  }
+  to {
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    opacity: 0;
+    transform: translate(0, 100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
