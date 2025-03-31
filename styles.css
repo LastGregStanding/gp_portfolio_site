@@ -375,7 +375,134 @@ body.no-scroll {
   }
 }
 
-/******** Email Button *******/
+/*********** Projects *************/
+
+.projects-section {
+  padding-top: 130px;
+  width: clamp(300px, 80vw, 1000px);
+  line-height: 25px;
+  animation: fade-in linear forwards;
+  animation-timeline: view();
+  animation-range: entry;
+  /* outline: 3px solid orange; */
+}
+
+.project-container {
+  margin-top: 50px;
+  /* outline: 3px solid red; */
+  width: clamp(300px, 80vw, 880px);
+  display: grid;
+  grid-template-areas: "one two" "three four";
+}
+
+.project-section {
+  margin-bottom: 40px;
+  margin-bottom: 150px;
+}
+
+.project-section:nth-child(1) {
+  grid-area: one;
+}
+.project-section:nth-child(2) {
+  grid-area: two;
+}
+.project-section:nth-child(3) {
+  grid-area: three;
+}
+.project-section:nth-child(4) {
+  grid-area: four;
+}
+
+.project-content h4 {
+  color: rgb(0, 171, 0);
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  /* outline: 3px solid orange; */
+  width: 80%;
+  margin: 0px auto;
+}
+
+.project-img-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  outline: 3px solid grey;
+}
+
+.project-tech-list ul {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.project-tech-list li {
+  font-size: 0.75rem;
+  padding: 5px;
+  background-color: rgba(68, 68, 68, 0.6);
+  border-radius: 20px;
+}
+
+@media (width <= 700px) {
+  .project-container {
+    grid-template-areas: "one" "two" "four" "three";
+    width: 400px;
+  }
+
+  .project-section {
+    margin-bottom: 20px;
+  }
+
+  .project-tech-list ul {
+    justify-content: center;
+  }
+}
+
+@media (width < 500px) {
+  .section-heading {
+    width: 100%;
+  }
+  .project-container {
+    grid-template-areas: "one" "two" "four" "three";
+    width: 100%;
+  }
+}
+
+/******** Icons and Buttons *******/
+
+.social-icons {
+  width: 100px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.social-icons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: transparent;
+  border: 0.2rem solid rgb(0, 171, 0);
+  font-size: 1rem;
+  border-radius: 50%;
+  transition: 0.3s ease;
+  color: white;
+}
+
+.social-icons a:hover {
+  color: black;
+  transform: scale(1.3) translateY(-5px);
+  background-color: rgb(0, 171, 0);
+  box-shadow: 0 0 25px rgb(0, 171, 0);
+}
 
 .email-btn {
   padding: 1vh 1vw;
