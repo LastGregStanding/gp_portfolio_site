@@ -392,7 +392,7 @@ body.no-scroll {
   /* outline: 3px solid red; */
   width: clamp(300px, 80vw, 880px);
   display: grid;
-  grid-template-areas: "one two" "three four" "five six";
+  grid-template-areas: "one two" "three four" "six five" "eight seven";
 }
 
 .project-section {
@@ -417,6 +417,12 @@ body.no-scroll {
 }
 .project-section:nth-child(6) {
   grid-area: six;
+}
+.project-section:nth-child(7) {
+  grid-area: seven;
+}
+.project-section:nth-child(8) {
+  grid-area: eight;
 }
 
 .project-content h4 {
@@ -458,7 +464,7 @@ body.no-scroll {
 
 @media (width <= 700px) {
   .project-container {
-    grid-template-areas: "one" "two" "four" "three" "five" "six";
+    grid-template-areas: "one" "two" "four" "three" "six" "five" "seven" "eight";
     width: 400px;
   }
 
