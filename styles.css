@@ -487,6 +487,56 @@ body.no-scroll {
   }
 }
 
+/************ Contact ************/
+
+.contact-section {
+  padding: 200px 0px 200px;
+  animation: fade-in linear forwards;
+  animation-timeline: view();
+  animation-range: entry;
+}
+
+.contact-section h2 {
+  font-size: 3rem;
+}
+
+.contact-section .section-content > * {
+  margin-top: 20px;
+}
+
+.contact-section .email-btn {
+  margin-top: 50px;
+}
+
+.contact-section > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+}
+
+.contact-section p {
+  font-size: 1rem;
+}
+
+@media (height < 1000px) {
+  .contact-section {
+    padding: 260px 0px 160px;
+  }
+}
+
+@media (height < 800px) {
+  .contact-section {
+    padding: 150px 0px 175px;
+  }
+}
+
+@media (height < 700px) {
+  .contact-section {
+    padding: 200px 0px 50px;
+  }
+}
+
 /******** Icons and Buttons *******/
 
 .social-icons {
