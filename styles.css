@@ -482,7 +482,7 @@ body.no-scroll {
     width: 100%;
   }
   .project-container {
-    grid-template-areas: "one" "two" "four" "three";
+    grid-template-areas: "one" "two" "four" "three" "six" "five" "seven" "eight";
     width: 100%;
   }
 }
